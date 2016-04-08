@@ -13,10 +13,10 @@ Install with NPM
 npm install angular-bricks.js
 ```
 
-## Usage
+## Usage 
 
 ```
-<div imago-bricksjs source="items" sizes="sizes">
+<div imago-bricksjs source="items" sizes="sizes" packed="packed">
 	<div ng-repeat="item in items"></div>
 </>
 ```
