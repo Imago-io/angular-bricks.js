@@ -1,7 +1,7 @@
 {
   "name": "angular-bricks.js",
   "version": "1.0.0",
-  "description": "",
+  "description": "AngularJS directive for Bricks.js",
   "main": "gulp.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
