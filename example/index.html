@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angular-bricksjs">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Bricks.js</title>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/bricks.js/dist/bricks.min.js"></script>
+  <script src="dist/index.js"></script>
+  <style>
+    body {
+      background: #df1b33;
+      color: #3d1e37;
+    }
+    .wrapper {
+      max-width: 100%;
+      width: 85%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .item {
+      width: 33%;
+      background: #3d1e37;
+      border-radius: 3px;
+    }
+
+    .item.big {
+      width: 50%;
+      background: green;
+    }
+  </style>
+</head>
+<body ng-controller="main">
+
+  <div class="wrapper">
+    <h1>Angular Bricks.js</h1>
+
+    <div class="items" imago-bricksjs source="items" sizes="sizes">
+      <div class="item" ng-class="{big: item.big}" ng-style="{height: item.height}" ng-repeat="item in items"></div>
+    </div>
+  </div>
+
+  <script>
+    angular.module('angular-bricksjs').controller('main', function($scope){
+      var i, item;
+
+      $scope.items = [];
+      $scope.sizes = [{ columns: 3, gutter: 25 }]
+
+      var getHeight = function(){
+        return Math.floor((Math.random() * 200) + 1)
+      };
+
+      for (item = i = 0; i <= 100; item = ++i) {
+        $scope.items.push({height: getHeight() + 'px'});
+      }
+
+    });
+  </script>
+
+</body>
+</html>
