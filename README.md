@@ -13,6 +13,12 @@ Install with NPM
 npm install angular-bricks.js
 ```
 
+Mark this module as a dependency in your angular app
+
+```
+angular.module('myApp', ['angular-bricksjs']);
+```
+
 ## Usage 
 
 ```
