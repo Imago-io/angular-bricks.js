@@ -1,6 +1,6 @@
 {
   "name": "angular-bricks.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "AngularJS directive for Bricks.js",
   "main": "gulp.js",
   "scripts": {
