@@ -30,7 +30,7 @@ angular.module('angular-bricksjs', [])
             sizes: scope.sizes
             container: '#' + uuid
             packed: scope.packed
-          scope.instance.pack()
+          scope.instance.resize(true).pack()
 
         scope.update = ->
           scope.instance.update()

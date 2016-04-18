@@ -32,7 +32,7 @@
             container: '#' + uuid,
             packed: scope.packed
           });
-          return scope.instance.pack();
+          return scope.instance.resize(true).pack();
         };
         scope.update = function() {
           return scope.instance.update();
