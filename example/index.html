@@ -24,10 +24,10 @@
       border-radius: 3px;
     }
 
-    .item.big {
+/*    .item.big {
       width: 50%;
       background: green;
-    }
+    }*/
   </style>
 </head>
 <body ng-controller="main">
@@ -36,7 +36,7 @@
     <h1>Angular Bricks.js</h1>
 
     <div class="items" imago-bricksjs source="items" sizes="sizes">
-      <div class="item" ng-class="{big: item.big}" ng-style="{height: item.height}" ng-repeat="item in items"></div>
+      <div class="item" ng-style="{height: item.height}" ng-repeat="item in items"></div>
     </div>
   </div>
 

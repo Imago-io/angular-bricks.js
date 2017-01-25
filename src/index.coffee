@@ -7,7 +7,7 @@ angular.module('angular-bricksjs', [])
         sizes: '='
         packed: '@'
 
-      link: (scope, element, attrs) ->
+      link: (scope, element) ->
 
         randomString = (length) ->
           chars = 'abcdefghiklmnopqrstuvwxyz'.split('')
@@ -25,17 +25,21 @@ angular.module('angular-bricksjs', [])
         scope.packed or= 'data-packed'
 
         scope.init = ->
+          # console.log 'init'
           scope.started = true
           scope.instance = Bricks
             sizes: scope.sizes
             container: '#' + uuid
             packed: scope.packed
           scope.instance.resize(true).pack()
+          # console.log 'scope.instance', scope.instance
 
         scope.update = ->
+          # console.log 'update'
           scope.instance.update()
 
         scope.$watchGroup ['items', 'sizes'], (value) ->
+          # console.log 'watch', i.height for i in value[0]
           for item in value
             return unless item?.length
           if !scope.started and value.length
